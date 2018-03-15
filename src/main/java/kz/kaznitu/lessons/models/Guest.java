@@ -1,22 +1,28 @@
 package kz.kaznitu.lessons.models;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-public class Teacher {
+public class Guest {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id ;
-    private String firstName ;
-    private String lastName ;
-    private String email ;
+    private long id;
+    private String firstName;
+    private String lastName;
+    private Integer number;
 
-    public Teacher(){}
 
-    public Teacher(String firstName, String lastName, String email) {
+    public Guest() {
+    }
+
+    public Guest(String firstName, String lastName, Integer number) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = email;
+        this.number = number;
+
     }
 
     public long getId() {
@@ -43,11 +49,12 @@ public class Teacher {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
+    public Integer getNumber() {
+        return number;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setNumber(Integer number) {
+        this.number = number;
     }
+
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Dinara</title>
+    <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="form-group">
+            <form action="#" th:action="@{/zakaz/editZakazz}" th:object = "${zakaz}" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" th:field = "*{name}" class="form-control" placeholder="Enter your name" value="${zakaz.name}" />
+                <label for="time">Time</label>
+                <input type="text" id="time" name="time" th:field = "*{time}" class="form-control" placeholder="Enter your time" value="${zakaz.time}" />
+                <br/>
+                <button type="submit" class="btn btn-primary">Сақтау</button>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script th:src = "@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</body>
+</html>

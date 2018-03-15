@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>Dinara</title>
+    <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <br/>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>TIME</th>
+            </tr>
+            <tr th:each = "zakaz : ${zakazs}">
+                <td th:text = "${zakaz.name}">test</td>
+                <td th:text = "${zakaz.time}">test</td>
+
+                <td> <a th:href = "@{'/zakaz/deleteContact?id='+${zakaz.id}}">delete</a></td>
+                <td><a th:href = "@{/zakaz/add}"  role="button">add</a></td>
+                <td> <a th:href="@{'/zakaz/editZakaz?id='+${zakaz.id}}">Edit</a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script th:src = "@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+</body>
+
+</html>

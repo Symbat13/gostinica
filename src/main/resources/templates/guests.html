@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-    <title>Title</title>
+    <title>Dinara</title>
     <link rel="stylesheet" th:href = "@{/css/bootstrap.min.css}" />
 </head>
 <body>
@@ -14,15 +14,17 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>course</th>
+                <th>number</th>
+
             </tr>
-            <tr th:each = "student : ${students}">
-                <td th:text = "${student.firstName}">test</td>
-                <td th:text = "${student.lastName}">test</td>
-                <td th:text = "${student.course}">test</td>
-                <td> <a th:href = "@{'/stud/deleteContact?id='+${student.id}}">delete</a></td>
-                <td><a th:href = "@{/stud/add}"  role="button">add</a></td>
-                <td> <a th:href="@{'/stud/editStud?id='+${student.id}}">Edit</a></td>
+            <tr th:each = "guest : ${guests}">
+                <td th:text = "${guest.firstName}">test</td>
+                <td th:text = "${guest.lastName}">test</td>
+                <td th:text = "${guest.number}">test</td>
+
+                <td> <a th:href = "@{'/guest/deleteContact?id='+${guest.id}}">delete</a></td>
+                <td><a th:href = "@{/guest/add}"  role="button">add</a></td>
+                <td> <a th:href="@{'/guest/editUser?id='+${guest.id}}">Edit</a></td>
             </tr>
         </table>
     </div>
