@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Menu{
+public class Sotrudniki {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id ;
@@ -14,9 +14,9 @@ public class Menu{
     private Number price  ;
     private String summary ;
 
-    public Menu(){}
+    public Sotrudniki(){}
 
-    public Menu(String name,Number price, String summary) {
+    public Sotrudniki(String name, Number price, String summary) {
         this.name = name;
         this.price = price;
         this.summary = summary;

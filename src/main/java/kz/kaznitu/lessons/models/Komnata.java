@@ -3,17 +3,17 @@ package kz.kaznitu.lessons.models;
 import javax.persistence.*;
 
 @Entity
-public class Zakaz {
+public class Komnata {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
     private Integer time;
 
-    public Zakaz() {
+    public Komnata() {
     }
 
-    public Zakaz(String name, Integer time) {
+    public Komnata(String name, Integer time) {
         this.name =name;
         this.time = time;
     }
